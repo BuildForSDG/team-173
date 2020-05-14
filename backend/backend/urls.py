@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.documentation import include_docs_urls
+from  rest_framework.schemas import get_schema_view
 
-urlpatterns = [
+API_TITLE = 'Give2Get'
+API_DESCRIPTION = 'A web Api for sharing books'
+schema_view = get_schema_view(title=API_TITLE)
+
+urlpatterns =  [
     path('admin/', admin.site.urls),
     path('donate/', include('donate.urls')),
     path('profile/', include('accounts.urls')),
@@ -26,4 +32,7 @@ urlpatterns = [
     path('registration/', 
     include('rest_auth.registration.urls')),
     path('', include('Storebooks.urls')),
+    path('docs/', include_docs_urls(title=API_TITLE, 
+    description=API_DESCRIPTION)),
+    path('schema/', schema_view),
 ]
