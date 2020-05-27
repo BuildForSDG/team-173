@@ -1,11 +1,15 @@
 import React from 'react';
-// import Icon from '@ant-design/icons/lib/components/Icon';
-import { HomeOutlined } from '@ant-design/icons';
-// import Icon from 'antd/lib/icon'
+import LoginCard from '../Login/LoginCard';
+import MiddleCard from '../Login/MiddleCard';
+import DefCard from '../Login/DefCard';
+
+
 const Login = () =>{
     return(
-        <div>Hello from login
-            
+        <div>
+            <LoginCard />  
+            <MiddleCard />
+            <DefCard />
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Button, Input } from 'antd';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Link } from 'react-router-dom';
 import { HomeOutlined, CopyOutlined, BookOutlined, UserOutlined, PlusOutlined, LogoutOutlined, SearchOutlined} from '@ant-design/icons';
 import styled from 'styled-components';
 
@@ -58,7 +58,7 @@ const DashBoardLayout = ({ component: Component, rest }) => {
                                         <Button type="button" className="trigger" style={{ background: '#593F62', border: "1px white solid", color:'white'}}>
                                             <PlusOutlined/> Add a book
                                         </Button>
-
+                                        <Link to='/'>
                                         <Button
                                             type="link"
                                             className="sign-out-btn"
@@ -67,7 +67,7 @@ const DashBoardLayout = ({ component: Component, rest }) => {
                                             Log Out <LogoutOutlined />
                       
                                         </Button>
-                                            
+                                            </Link>  
                                     </HeaderDiv>
                                        
                                     </div>

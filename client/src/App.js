@@ -4,9 +4,8 @@ import 'antd/dist/antd.css';
 import './App.css';
 import { Provider } from "react-redux";
 import store from './state/types/store';
-
 import AppRouter from './components/router';
-import store from './state/types/store';
+
 
 
 function App() {
